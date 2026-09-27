@@ -9,8 +9,8 @@ const MovingForm = () => {
   const handleSubmit = async () => {
     const response = await fetch('/api/stats')
     const data = await response.json()
-    const values = data.GET_STATS_DATA.STATISTICAL_DATA.DATA_INF.VALUE
-    console.log(values)
+    const statisticalData = data.GET_STATS_DATA.STATISTICAL_DATA
+    console.log('分類情報:', statisticalData.CLASS_INF)
   }
   return (
     <section className={styles.form}>
