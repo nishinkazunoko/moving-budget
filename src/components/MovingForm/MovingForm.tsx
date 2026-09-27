@@ -9,7 +9,8 @@ const MovingForm = () => {
   const handleSubmit = async () => {
     const response = await fetch('/api/stats')
     const data = await response.json()
-    console.log(data)
+    const values = data.GET_STATS_DATA.STATISTICAL_DATA.DATA_INF.VALUE
+    console.log(values)
   }
   return (
     <section className={styles.form}>
