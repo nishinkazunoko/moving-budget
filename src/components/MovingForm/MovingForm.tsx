@@ -6,14 +6,10 @@ const MovingForm = () => {
   const [boxes, setBoxes] = useState(0)
   const [furniture, setFurniture] = useState(0)
   const [appliances, setAppliances] = useState(0)
-  const handleSubmit = () => {
-    console.log({
-      from,
-      to,
-      boxes,
-      furniture,
-      appliances,
-    })
+  const handleSubmit = async () => {
+    const response = await fetch('/api/stats')
+    const data = await response.json()
+    console.log(data)
   }
   return (
     <section className={styles.form}>
