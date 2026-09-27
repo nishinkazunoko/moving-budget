@@ -1,8 +1,8 @@
-import MovingForm from './components/MovingForm/MovingForm'
+import WeatherDashboard from './components/WeatherDashboard/WeatherDashboard'
 const App = () => {
   return (
     <main>
-      <MovingForm />
+      <WeatherDashboard />
     </main>
   )
 }
