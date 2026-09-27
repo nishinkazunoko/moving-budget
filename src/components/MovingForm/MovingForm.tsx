@@ -10,7 +10,9 @@ const MovingForm = () => {
     const response = await fetch('/api/stats')
     const data = await response.json()
     const statisticalData = data.GET_STATS_DATA.STATISTICAL_DATA
-    console.log('分類情報:', statisticalData.CLASS_INF)
+    const classes = statisticalData.CLASS_INF.CLASS_OBJ
+    console.log('費用分類:', classes.find((item: any) => item['@id'] === 'cat01')?.CLASS)
+    console.log('地域分類:', classes.find((item: any) => item['@id'] === 'cat02')?.CLASS)
   }
   return (
     <section className={styles.form}>
